@@ -1,0 +1,136 @@
+[Generic Settings]
+Scope Module = ChipWhisperer/OpenADC
+Target Module = ChipWhisperer CW305 (Artix-7)
+[[Acquisition Settings]]
+Number of Traces = 5000
+Number of Sets = 1
+Traces per Set = 5000
+Key/Text Pattern = Basic
+[Generic Settings]
+[[Basic]]
+Key = Fixed
+Fixed Encryption Key = 2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C
+Plaintext = Random
+[Generic Settings]
+[[Project Settings]]
+Trace Format = ChipWhisperer/Native
+[Target Settings]
+[[ChipWhisperer CW305 (Artix-7)]]
+[[[PLL Settings]]]
+Enabled = True
+[[[[CLK-SMA (X6)]]]]
+CLK-SMA Enabled = False
+CLK-SMA Source = PLL2
+CLK-SMA Slew Rate = +0nS
+PLL0 Frequency = 9600000.0
+[[[PLL Settings]]]
+[[[[CLK-N13 (FGPA Pin N13)]]]]
+CLK-N13 Enabled = True
+CLK-N13 Source = PLL1
+CLK-N13 Slew Rate = +0nS
+PLL1 Frequency = 10000000.0
+[[[PLL Settings]]]
+[[[[CLK-E12 (FGPA Pin E12)]]]]
+CLK-E12 Enabled = False
+CLK-E12 Source = PLL2
+CLK-E12 Slew Rate = +0nS
+PLL2 Frequency = 12544000.0
+[[[PLL Settings]]]
+[[ChipWhisperer CW305 (Artix-7)]]
+Disable CLKUSB For Capture = True
+Time CLKUSB Disabled for = 50
+CLKUSB Manual Setting = True
+VCC-INT = 1.0
+[[[FPGA Bitstream]]]
+Bitstream File = /git/Research/Vivado/cw305_artixtarget_vanilla/fpga/vivado_examples/aes128_verilog/aes128_verilog.runs/impl_100t/cw305_top.bit
+[Scope Settings]
+[[ChipWhisperer/OpenADC]]
+Connection = NewAE USB (CWLite/CW1200)
+Auto-Refresh DCM Status = True
+[[[NewAE USB (CWLite/CW1200)]]]
+Serial Number = Auto
+[[[[ChipWisperer-Lite USB]]]]
+[[ChipWhisperer/OpenADC]]
+[[[OpenADC]]]
+[[[[HW Information]]]]
+Version = (1, 8, 'ChipWhisperer-Lite', 0)
+Synth Date = unknown
+System Freq = 96000000
+Max Samples = 24400
+[[[OpenADC]]]
+[[[[Gain Setting]]]]
+Mode = high
+Setting = 30
+Result = 24.8359375
+[[[OpenADC]]]
+[[[[Trigger Setup]]]]
+Trigger Pin State = False
+Mode = rising edge
+Timeout (secs) = 2
+Offset = 0
+Pre-Trigger Samples = 0
+Total Samples = 250
+Downsample Factor = 1
+Trigger Active Count = 44
+[[[OpenADC]]]
+[[[[Clock Setup]]]]
+[[[[[ADC Clock]]]]]
+Source = EXTCLK x4 via DCM
+Phase Adjust = 0
+ADC Freq = 40001415
+ADC Sample Rate = 40001415
+DCM Locked = True
+[[[[Clock Setup]]]]
+Freq Counter = 10000350
+Freq Counter Src = EXTCLK Input
+[[[[[CLKGEN Settings]]]]]
+Input Source = system
+Input Frequency = 10000000.0
+Multiply = 2
+Divide = 1
+Desired Frequency = 192000000
+Current Frequency = 192000000
+DCM Locked = True
+[[ChipWhisperer/OpenADC]]
+[[[CW Extra]]]
+[[[[CW Extra Settings]]]]
+[[[[[Trigger Pins]]]]]
+Target IO1 (Serial TXD) = False
+Target IO2 (Serial RXD) = False
+Target IO3 (SmartCard Serial) = False
+Target IO4 (Trigger Line) = True
+Collection Mode = OR
+[[[[CW Extra Settings]]]]
+Trigger Module = Basic (Edge/Level)
+Clock Source = Target IO-IN
+Target HS IO-Out = Disabled
+HS-Glitch Out Enable (High Power) = False
+HS-Glitch Out Enable (Low Power) = False
+[[[[[Target IOn Pins]]]]]
+Target IO1 = Serial TXD
+Target IO2 = Serial RXD
+Target IO3 = High-Z
+Target IO4 = High-Z
+[[[[CW Extra Settings]]]]
+[[[[[Target IOn GPIO Mode]]]]]
+Target IO1: GPIO = Disabled
+Target IO2: GPIO = Disabled
+Target IO3: GPIO = Disabled
+Target IO4: GPIO = Disabled
+nRST: GPIO = Default
+PDID: GPIO = Default
+PDIC: GPIO = Default
+[[[[CW Extra Settings]]]]
+Target Power State = True
+[[[CW Extra]]]
+[[[[Glitch Module]]]]
+Clock Source = Target IO-IN
+Glitch Width (as % of period) = 10.15625
+Glitch Width (fine adjust) = 0
+Glitch Offset (as % of period) = 10.15625
+Glitch Offset (fine adjust) = 0
+Glitch Trigger = Manual
+Single-Shot Arm = After Scope Arm
+Ext Trigger Offset = 0
+Repeat = 1
+Output Mode = Clock XORd
